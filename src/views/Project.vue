@@ -30,6 +30,7 @@
             </VueDragResize>
         </div>
         <button @click="addRect"> + </button>
+        <button @click="createFile"> Save </button>
         <toolbar></toolbar>
     </div>
 </template>
@@ -100,6 +101,23 @@
             }
         },
         methods: {
+            createFile() {
+
+                console.log(this.rects);
+                
+                // var writeFile = require('write');
+                
+                // // promise
+                // writeFile('foo.txt', 'This is content...')
+                // .then(function() {
+                //     // do stuff
+                // });
+                // var createFile = require('create-file');
+                
+                // createFile('../assets/test.html', 'my content\n', function (err) {
+                // // file either already exists or is now created (including non existing directories)
+                // });
+            },
             addRect() {
                 this.$store.dispatch('rect/addRect');
             },
